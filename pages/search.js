@@ -44,7 +44,7 @@ function Search({ searchResults }) {
                     </div>
                     
                 </section>
-                <section className="mt-5 md:mt-0 xl:inline-flex xl:min-w-[600px]">
+                <section className="mt-5 md:mt-0 xl:inline-flex xl:min-w-[600px] h-72 md:h-[inherit]">
                     <Map searchResults={searchResults} />
                 </section>
             </main>
