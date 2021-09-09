@@ -1,18 +1,15 @@
-import Image from "next/image"
+import Image from 'next/image'
 
-function LargeCard({ img, title, description, buttonText }) {
-    return (
-        <section className="relative py-16 cursor-pointer">
-            <div className="relative h-96 min-w-[300px]">
-                <Image className="rounded-2xl" src={img} layout="fill" objectFit="cover"/>
-            </div>
-            <div className="absolute top-32 left-12">
-                <h3 className="text-4xl mb-3 w-64">{title}</h3>
-                <p>{description}</p>
-                <button className="text-sm text-white bg-gray-900 rounded-lg px-4 py-2 mt-5">{buttonText}</button>
-            </div>
-        </section>
-    )
+function LargeCard({img, title, description}) {
+  return (
+    <div className="cursor-pointer hover:scale-105 transform transition duration-300 ease-out">
+        <div className="relative h-[20rem] w-[19.5rem] md:h-[30rem] md:w-[28rem]">
+            <Image className="rounded-xl" src={img} layout="fill"/>
+        </div>
+        <h3 className="text-2xl font-semibold mt-3">{title}</h3>
+        <p className="font-light text-base">{description}</p>
+    </div>
+  )
 }
 
 export default LargeCard
